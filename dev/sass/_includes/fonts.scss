@@ -1,0 +1,33 @@
+@mixin generate-font-face ($fontname, $fontfile, $fontweight, $fontstyle) {
+	@font-face {
+		font-family: $fontname;
+		src: url('../fonts/#{$fontfile}.eot');
+		src: url('../fonts/#{$fontfile}.eot?#iefix') format('embedded-opentype'),
+			 url('../fonts/#{$fontfile}.woff') format('woff'),
+			 url('../fonts/#{$fontfile}.ttf') format('truetype'),
+			 url('../fonts/#{$fontfile}.svg##{$fontname}') format('svg');
+		font-weight: $fontweight;
+		font-style: $fontstyle;
+	}
+}
+
+@include generate-font-face ('rouble', '../fonts/rouble/rouble', 400, normal);
+@include generate-font-face ('eurostile', '../fonts/fonts/eurostilewebfont', 400, normal);
+@include generate-font-face ('trebuchet', '../fonts/fonts/TrebuchetMS', 400, normal);
+@include generate-font-face ('trebuchet', '../fonts/fonts/TrebuchetMS-Bold', 700, normal);
+
+.rB{
+	text-transform: none !important;
+	font-style: normal;
+	font-weight: normal;
+	display: inline-block;
+	vertical-align: baseline;
+	&:after{
+		content: 'a';
+		display: block;
+		font-family: 'rouble';
+	}
+}
+
+// font-family: Verdana, Geneva, sans-serif;
+// font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;

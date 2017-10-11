@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="uft-8"/>
+			<title> Orcik</title>
+			<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div class='container'>
+			<div class='lingt-box'>
+				<div class='lingt-box__header-wrp'>
+					<h2 class='lingt-box__header'>Header 1</h2>
+				</div>
+				<div class='lingt-box__text-wrp'>
+					<p class='lingt-box__text lingt-box__text__js'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore diam nonumy... </p>
+					<button class='read-more'>mehr</button>
+				</div>
+
+			</div>
+			<div class='lingt-box'>
+				<div class='lingt-box__header-wrp'>
+					<h2 class='lingt-box__header'>Header 2</h2>
+				</div>
+				<div class='lingt-box__text-wrp'>
+					<p class='lingt-box__text lingt-box__text__js'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore diam nonumy... </p>
+				</div>
+				<button class='read-more'>mehr</button>
+			</div>
+			<div class='lingt-box'>
+				<div class='lingt-box__header-wrp'>
+					<h2 class='lingt-box__header'>Header 3</h2>
+				</div>
+				<div class='lingt-box__text-wrp'>
+					<p class='lingt-box__text lingt-box__text__js'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore diam nonumy... </p>
+				</div>
+				<button class='read-more'>mehr</button>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+		<script type="text/javascript" src="jquery.dotdotdot.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function() {
+			
+				$('.lingt-box__text-wrp').dotdotdot({
+					// Prevents the <button class="read-more" /> from being removed
+					 keep: '.read-more',
+					ellipsis: '\u2026 ',
+					watch: "window"
+				});
+			});
+		</script>
+	</body>
+
+
+</html>
